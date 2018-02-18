@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_text_select_handle_left.png.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\text_select_handle_left.png"
+    },
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_selection_drag_layer.xml.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\layout\\selection_drag_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_text_select_handle_right.png.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\text_select_handle_right.png"
+    },
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_text_select_handle_right.png.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\text_select_handle_right.png"
+    },
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_text_select_handle_left.png.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\text_select_handle_left.png"
+    },
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_text_select_handle_right.png.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\text_select_handle_right.png"
+    },
+    {
+        "merged": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_text_select_handle_left.png.flat",
+        "source": "C:\\Users\\LUNA\\AndroidStudioProjects\\caramelo2\\webViewMarker\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\text_select_handle_left.png"
+    }
+]

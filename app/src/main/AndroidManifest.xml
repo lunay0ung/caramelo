@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.luna.caramelo">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/caramelo_icon_yellow"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/caramelo_icon_yellow"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme_noActionBar">
+        <!--hardwareAccelerated ==> 하드웨어 가속 사용 -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".LoginGeneralActivity" />
+        <activity android:name=".JoinGeneralActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".NotebookActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".WebviewActivity" />
+        <activity android:name=".GuideActivity" />
+
+        <!-- 브로드캐스트 리시버 등록 2017-12-22 -->
+        <!-- 참고: http://koreaparks.tistory.com/128 -->
+        <receiver
+            android:name=".NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <!-- 두 개의 인텐트 정의, 이 인텐트에 리시버 등록 -->
+            </intent-filter>
+        </receiver>
+        <!-- 알고 보니 connectivity change 등은 누가에서 deprecated...일단 참고용으로 보관은 함 -->
+
+
+        <!-- 카카오톡 로그인 위하여! -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity android:name=".JoinKakaoActivity"></activity>
+    </application>
+
+</manifest>

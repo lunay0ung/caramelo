@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    app:behavior_anchorOffset="350dp"
+    app:behavior_peekHeight="80dp"
+    app:behavior_defaultState="collapsed"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="com.trafi.anchorbottomsheetbehavior.AnchorBottomSheetBehavior"
+    tools:showIn="@layout/activity_webview">
+
+    <!--원래 peekHeight 80dp-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:text="모르는 단어나 문장을 길게 터치하세요."
+                android:textSize="15sp"
+                android:textColor="#9E9E9E"
+                />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_wordMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="7dp"
+                    android:text="단어"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_sentenceMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/tv_wordMode"
+                    android:text="문장"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_wordMode"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="210dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/save_128"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_simpleMode"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_sentenceMode"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/btn_simpleMode"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/hide2_128"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+                    android:hint="검색"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_cancelSearch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0."
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/cancel_128"
+                    app:layout_constraintBottom_toTopOf="@+id/et_search" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/layout_meaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--문장번역모드일 때는 gone으로-->
+
+                <EditText
+                    android:id="@+id/et_meaning"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginEnd="20dp"
+                    android:hint="스페인어-한국어"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_meaningEn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="0.6"
+                    android:hint="스페인어-영어"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+
+                    <!--<Button-->
+                        <!--android:id="@+id/btn_cancelMeaning"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_weight="0."-->
+                        <!--android:layout_marginEnd="20dp"-->
+                        <!--android:background="@drawable/cancel_128"-->
+                        <!--app:layout_constraintBottom_toTopOf="@+id/et_search" />-->
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:id="@+id/webview_dic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </WebView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+
+<!--2018.02.02 원래 있던 코드 일단 박제-->
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/bottom_sheet"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/lightgrey"-->
+    <!--app:behavior_anchorOffset="450dp"-->
+    <!--app:behavior_peekHeight="40dp"-->
+    <!--app:behavior_defaultState="collapsed"-->
+    <!--app:layout_behavior="com.trafi.anchorbottomsheetbehavior.AnchorBottomSheetBehavior"-->
+    <!--tools:showIn="@layout/activity_webview">-->
+
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<android.support.constraint.ConstraintLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_wordMode"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginBottom="6dp"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:text="단어"-->
+                    <!--android:textSize="18sp"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_sentenceMode"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_marginBottom="6dp"-->
+                    <!--android:layout_marginStart="24dp"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_wordMode"-->
+                    <!--android:text="문장"-->
+                    <!--android:textSize="18sp"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/tv_wordMode"-->
+                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_save"-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginBottom="6dp"-->
+                    <!--android:layout_marginEnd="34dp"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:background="@drawable/save_128"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+            <!--</android.support.constraint.ConstraintLayout>-->
+
+
+            <!--<android.support.constraint.ConstraintLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_search"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:layout_marginEnd="20dp"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:imeOptions="actionSearch"-->
+                    <!--android:hint="단어 검색"-->
+                    <!--android:textSize="15sp" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_cancelSearch"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:layout_marginEnd="25dp"-->
+                    <!--android:layout_marginStart="344dp"-->
+                    <!--android:layout_marginTop="16dp"-->
+                    <!--android:background="@drawable/cancel_128"-->
+                    <!--app:layout_constraintBottom_toTopOf="@+id/et_search"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintHorizontal_bias="1.0"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent"-->
+                    <!--app:layout_constraintVertical_bias="0.0" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_meaning"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:layout_marginBottom="35dp"-->
+                    <!--android:layout_marginEnd="20dp"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:hint="단어 뜻"-->
+                    <!--android:textSize="15sp"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/et_search" />-->
+
+            <!--</android.support.constraint.ConstraintLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<WebView-->
+                    <!--android:id="@+id/webview_dic"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                <!--</WebView>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+<!--</LinearLayout>-->

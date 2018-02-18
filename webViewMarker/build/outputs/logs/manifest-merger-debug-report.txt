@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+	package
+		ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:70-108
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:133-158
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:2:109-132
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:3-70
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:3-70
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:3-70
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:3-70
+INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:3-70
+	android:targetSdkVersion
+		ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:39-68
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml:3:13-38
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LUNA\AndroidStudioProjects\caramelo2\webViewMarker\src\main\AndroidManifest.xml

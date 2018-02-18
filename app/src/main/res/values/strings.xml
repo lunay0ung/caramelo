@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">caramelo</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">홈</string>
+    <string name="title_others">기타 컨텐츠</string>
+    <string name="title_scrap">스크랩</string>
+    <string name="title_search">검색</string>
+    <string name="title_voca">단어장</string>
+    <string name="title_setting">설정</string>
+    <string name="search_box">검색어 또는 url 입력</string>
+
+
+    <!--버튼-->
+    <string name="btn_login">일반 로그인</string>
+    <string name="btn_join">회원가입</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="server_client_id">517754239169-5ts7nsa1auaqvsndd9c0optv48m0ojed.apps.googleusercontent.com</string>
+    <!-- Sign-in status messages -->
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="signed_in">Signed in</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="signed_out">Signed out</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--페이스북 로그인을 위한 것-->
+    <!--17-12-22에 하려고 했으나 네이버 하기로 마음 바꿈ㅋㅋㅋ, 그러나 삭제는 일단 보류-->
+    <string name="facebook_app_id">339579546509703</string>
+    <string name="fb_login_protocol_scheme">fb339579546509703</string>
+
+    <!--네이버 로그인을 위한 것 17-12-23-->
+    <!--....자꾸 오류나서 ㅠㅠ 카카오톡으로 바꿨슴미다..-->
+    <string name="OAUTH_CLIENT_ID">qp6HTtVKau0hwyNI7SYi</string>
+    <string name="OAUTH_CLIENT_SECRET">GunhPdYwnw</string>
+    <string name="OAUTH_CLIENT_NAME">caramelo</string>
+
+    <!--드뎌 파이널....카톡 로그인 위한 것-->
+    <string name="kakao_app_key">21511a8254efb4dc9cbdcc3de1e2d0a9</string>
+
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_128"
+        android:title="@string/title_home" />
+
+    <!--<item-->
+        <!--android:id="@+id/nav_others"-->
+        <!--android:icon="@drawable/diversity5_128"-->
+        <!--android:title="@string/title_others" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/nav_search"-->
+    <!--android:icon="@drawable/search_128"-->
+    <!--android:title="@string/title_search" />-->
+
+    <item
+        android:id="@+id/nav_favoite"
+        android:icon="@drawable/heart_128"
+        android:title="@string/title_scrap" />
+
+    <item
+        android:id="@+id/nav_notebook"
+        android:icon="@drawable/openbook_128"
+        android:title="@string/title_voca" />
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/profile2_128"
+        android:title="@string/title_setting" />
+
+
+
+</menu>

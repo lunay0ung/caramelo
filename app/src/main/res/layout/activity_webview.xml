@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.luna.caramelo.WebviewActivity">
+
+    <include layout="@layout/webview_content"/>
+
+
+    <include layout="@layout/anchorbottomsheet_dictionary" />
+</android.support.design.widget.CoordinatorLayout>
