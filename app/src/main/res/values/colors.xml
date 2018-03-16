@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="lightgrey">#F5F5F5</color>
 
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+    <color name="black">#212121</color>
+
 </resources>

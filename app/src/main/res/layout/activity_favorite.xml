@@ -4,110 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.luna.caramelo.FavoriteActivity">
+    android:id="@+id/constraintLayout"
+    tools:context="com.example.luna.caramelo.Favorites.FavoriteActivity">
 
-    <TabHost
-        android:id="@+id/tabHost"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <TabHost
+            android:id="@+id/tabHost"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TabWidget
-                android:id="@android:id/tabs"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/tab1"
+                <TabWidget
+                    android:id="@android:id/tabs"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:weightSum="10"
-                    >
+                    android:layout_height="wrap_content" />
 
-
-                    <!--탭 레이아웃-->
-                    <android.support.design.widget.TabLayout
-                        android:id="@+id/tabLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#C0C0C0"
-                        android:minHeight="?attr/actionBarSize"
-                        app:layout_constraintBottom_toTopOf="@+id/pager"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"/>
-
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="50dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_weight="8"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                </LinearLayout>
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical">-->
-
-    <!--&lt;!&ndash;탭 레이아웃&ndash;&gt;-->
-    <!--<android.support.design.widget.TabLayout-->
-    <!--android:id="@+id/tabLayout"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:backgroundTint="#C0C0C0"-->
-    <!--android:minHeight="?attr/actionBarSize"-->
-    <!--app:layout_constraintBottom_toTopOf="@+id/pager"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"/>-->
-
-    <!--<android.support.v4.view.ViewPager-->
-    <!--android:id="@+id/pager"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:layout_alignParentTop="true" />-->
-
-    <!--</LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        >
 
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" >
+                        <!--탭 레이아웃-->
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#C0C0C0"
+                            android:minHeight="?attr/actionBarSize"
+                            app:layout_constraintBottom_toTopOf="@+id/pager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
 
-    </android.support.design.widget.BottomNavigationView>
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="8"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <android.support.v4.widget.SwipeRefreshLayout
+                            android:id="@+id/swipe_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical"
+                                android:paddingBottom="55dp"/>
+
+                        </android.support.v4.widget.SwipeRefreshLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+        <include
+            android:id="@+id/bottom_menu"
+            layout="@layout/bottom_menu"/>
+
+
+    </RelativeLayout>
+
+
+
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/navigation"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="0dp"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:background="?android:attr/windowBackground"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:menu="@menu/navigation" >-->
+
+    <!--</android.support.design.widget.BottomNavigationView>-->
 
 </android.support.constraint.ConstraintLayout>

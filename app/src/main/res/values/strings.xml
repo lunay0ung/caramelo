@@ -7,7 +7,7 @@
     <string name="title_search">검색</string>
     <string name="title_voca">단어장</string>
     <string name="title_setting">설정</string>
-    <string name="search_box">검색어 또는 url 입력</string>
+    <string name="search_hint">단어장 검색</string>
 
 
     <!--버튼-->
@@ -51,5 +51,9 @@
     <!--드뎌 파이널....카톡 로그인 위한 것-->
     <string name="kakao_app_key">21511a8254efb4dc9cbdcc3de1e2d0a9</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ocr_result_tip">인식결과는 여기에 나타납니다</string>
 
 </resources>

@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:gravity="center_vertical"
-        android:text="내 정보"
         android:textAlignment="gravity"
         android:textStyle="bold"
         android:textSize="20dp" />

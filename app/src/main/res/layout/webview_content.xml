@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_webview">
 
+
     <ProgressBar
         android:id="@+id/pb"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progressDrawable="@drawable/progressbar_states"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        />
+        android:progressDrawable="@drawable/progressbar_states" />
+
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
     </WebView>
+
+
+    <Button
+        android:id="@+id/btn_goHome"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/btn_bookmark"
+        android:layout_alignStart="@+id/btn_bookmark"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/house_128" />
+
+    <Button
+        android:id="@+id/btn_bookmark"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginBottom="95dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/bookmark2_128"
+        tools:layout_editor_absoluteX="317dp"
+        tools:layout_editor_absoluteY="229dp" />
+
 
 </RelativeLayout>

@@ -84,7 +84,7 @@ Other Threads:
   0x0000000018695800 VMThread [stack: 0x000000001a380000,0x000000001a480000] [id=23836]
   0x000000001a62b800 WatcherThread [stack: 0x000000001b180000,0x000000001b280000] [id=24308]
 
-VM state:not at safepoint (normal execution)
+VM state:not questionedAt safepoint (normal execution)
 
 VM Mutex/Monitor currently owned by a thread: None
 
@@ -246,16 +246,16 @@ Classes redefined (0 events):
 No events
 
 Internal exceptions (10 events):
-Event: 6.906 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/model/internal/core/ModelMapGroovyViewBeanInfo> (0x00000000e4a8d148) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 6.906 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/model/internal/core/ModelMapGroovyViewCustomizer> (0x00000000e4aa0260) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 6.907 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/model/internal/core/NodeBackedModelMapCustomizer> (0x00000000e4ac6858) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 6.908 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/platform/base/BinaryContainer_ImplCustomizer> (0x00000000e4b26b10) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 7.005 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e53f82e0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 7.005 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e5403560) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 7.020 Thread 0x00000000214d3000 Implicit null exception at 0x000000000549da37 to 0x000000000549e201
-Event: 7.038 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e57b1460) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 7.038 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e57c4268) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 7.038 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e57c5b18) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 6.906 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/model/internal/core/ModelMapGroovyViewBeanInfo> (0x00000000e4a8d148) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 6.906 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/model/internal/core/ModelMapGroovyViewCustomizer> (0x00000000e4aa0260) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 6.907 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/model/internal/core/NodeBackedModelMapCustomizer> (0x00000000e4ac6858) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 6.908 Thread 0x000000001c2c0000 Exception <a 'java/lang/ClassNotFoundException': org/gradle/platform/base/BinaryContainer_ImplCustomizer> (0x00000000e4b26b10) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 7.005 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e53f82e0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 7.005 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e5403560) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 7.020 Thread 0x00000000214d3000 Implicit null exception questionedAt 0x000000000549da37 to 0x000000000549e201
+Event: 7.038 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e57b1460) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 7.038 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e57c4268) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 7.038 Thread 0x00000000214d3000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e57c5b18) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
 
 Events (10 events):
 Event: 7.073 loading class org/gradle/api/internal/changedetection/rules/InputFilesTaskStateChanges

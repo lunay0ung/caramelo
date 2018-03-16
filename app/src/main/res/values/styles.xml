@@ -26,4 +26,15 @@
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <!--<item name="android:background">@color/black_overlay</item>-->
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <!--검색기능 넣는 WordbookActivity에서 씀-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

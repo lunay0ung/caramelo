@@ -9,37 +9,69 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 카메라 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
 
     <application
-        android:name=".GlobalApplication"
+        android:name=".Settings.GlobalApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/caramelo_icon_yellow"
         android:label="@string/app_name"
         android:roundIcon="@drawable/caramelo_icon_yellow"
         android:supportsRtl="true"
-        android:hardwareAccelerated="true"
         android:theme="@style/AppTheme_noActionBar">
-        <!--hardwareAccelerated ==> 하드웨어 가속 사용 -->
-        <activity android:name=".MainActivity">
+
+        <!-- hardwareAccelerated ==> 하드웨어 가속 사용 -->
+        <activity android:name=".Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".LoginGeneralActivity" />
-        <activity android:name=".JoinGeneralActivity" />
-        <activity android:name=".FavoriteActivity" />
-        <activity android:name=".NotebookActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".WebviewActivity" />
-        <activity android:name=".GuideActivity" />
+        <activity android:name=".Settings.SettingActivity" />
+        <activity android:name=".Settings.Account.LoginGeneralActivity" />
+        <activity android:name=".Settings.Account.JoinGeneralActivity" />
+        <activity android:name=".Favorites.FavoriteActivity" />
+        <activity
+            android:name=".Wordbook.WordbookActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".Settings.Account.AccountManagementActivity" />
+        <activity android:name=".Main.WebviewActivity" />
+        <activity android:name=".Settings.GuideActivity" />
 
         <!-- 브로드캐스트 리시버 등록 2017-12-22 -->
         <!-- 참고: http://koreaparks.tistory.com/128 -->
         <receiver
-            android:name=".NetworkChangeReceiver"
+            android:name=".Settings.NetworkChangeReceiver"
             android:label="NetworkChangeReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -55,7 +87,50 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
 
-        <activity android:name=".JoinKakaoActivity"></activity>
+        <activity android:name=".Settings.Account.JoinKakaoActivity" />
+        <activity android:name=".Settings.Account.UpdateInfoActivity" />
+        <activity android:name=".Settings.Account.WithdrawActivity" />
+        <activity android:name=".Settings.QnA.QnaListActivity" />
+        <activity
+            android:name=".Settings.QnA.QuestionActivity"
+            android:parentActivityName=".Settings.QnA.QnaListActivity">
+
+            <!-- 액션바에 있는 뒤로 가기 버튼 누르면 상위 액티비티로 이동 -->
+        </activity>
+        <activity
+            android:name=".Settings.QnA.QuestionContentActivity"
+            android:parentActivityName=".Settings.QnA.QnaListActivity" />
+
+        <service android:name=".Tools.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Tools.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Settings.QnA.UpdateQuestionActivity" />
+
+        <!--예제로 넣었던 액티비티-->
+        <activity
+            android:name=".TextRecognition.DoorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape" />
+
+
+        <activity android:name=".TextRecognition.TextRecognitionActivity"
+            android:parentActivityName=".Main.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!--하단의 바텀시트에 포함된 editText때문에 액티비티에 진입하자마자 자동으로 키보드가 팝업됨. 그것을 막기 위해 추가함-->
+
+        <activity
+            android:name=".TextRecognition.CameraView"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </application>
 
 </manifest>

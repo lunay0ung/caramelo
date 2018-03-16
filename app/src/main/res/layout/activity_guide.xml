@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.luna.caramelo.GuideActivity">
+    tools:context="com.example.luna.caramelo.Settings.GuideActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

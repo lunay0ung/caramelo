@@ -75,7 +75,7 @@ Other Threads:
   0x0000000018e55800 VMThread [stack: 0x000000001ab40000,0x000000001ac40000] [id=24084]
   0x000000001ae63800 WatcherThread [stack: 0x000000001b9d0000,0x000000001bad0000] [id=22288]
 
-VM state:not at safepoint (normal execution)
+VM state:not questionedAt safepoint (normal execution)
 
 VM Mutex/Monitor currently owned by a thread: None
 
@@ -237,16 +237,16 @@ Classes redefined (0 events):
 No events
 
 Internal exceptions (10 events):
-Event: 9.717 Thread 0x000000001d709800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e84511b0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 10.156 Thread 0x000000001d709800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e9a999b0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 13.533 Thread 0x000000001d703000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$negate$1(Ljava/lang/Object;)Z> (0x00000000e043e4b0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 584]
-Event: 13.721 Thread 0x000000001d1e7800 Exception <a 'java/lang/ClassNotFoundException': org/gradle/api/plugins/JavaPluginConventionBeanInfo> (0x00000000e00a8860) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 13.722 Thread 0x000000001d1e7800 Exception <a 'java/lang/ClassNotFoundException': org/gradle/api/plugins/JavaPluginConventionCustomizer> (0x00000000e00e03e0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 13.865 Thread 0x000000001d1e7800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$or$2(Ljava/util/function/Predicate;Ljava/lang/Object;)Z> (0x00000000e11aa8d8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 584]
-Event: 13.868 Thread 0x000000001d1e7800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparing$ea9a8b3a$1(Ljava/util/Comparator;Ljava/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)I> (0x00000000e11c0140) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\sr
-Event: 242.720 Thread 0x000000001d703000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$asRunnable$0(Lcom/android/apkzlib/utils/IOExceptionRunnable;)V> (0x00000000ea03d8d8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 58
-Event: 243.123 Thread 0x000000001d1e7800 Exception <a 'java/lang/IncompatibleClassChangeError': Found class java.lang.Object, but interface was expected> (0x00000000e37d44c0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 643]
-Event: 243.634 Thread 0x000000001d1e7800 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e0a61198) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 9.717 Thread 0x000000001d709800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e84511b0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 10.156 Thread 0x000000001d709800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e9a999b0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 13.533 Thread 0x000000001d703000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$negate$1(Ljava/lang/Object;)Z> (0x00000000e043e4b0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 584]
+Event: 13.721 Thread 0x000000001d1e7800 Exception <a 'java/lang/ClassNotFoundException': org/gradle/api/plugins/JavaPluginConventionBeanInfo> (0x00000000e00a8860) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 13.722 Thread 0x000000001d1e7800 Exception <a 'java/lang/ClassNotFoundException': org/gradle/api/plugins/JavaPluginConventionCustomizer> (0x00000000e00e03e0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 13.865 Thread 0x000000001d1e7800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$or$2(Ljava/util/function/Predicate;Ljava/lang/Object;)Z> (0x00000000e11aa8d8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 584]
+Event: 13.868 Thread 0x000000001d1e7800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparing$ea9a8b3a$1(Ljava/util/Comparator;Ljava/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)I> (0x00000000e11c0140) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\sr
+Event: 242.720 Thread 0x000000001d703000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$asRunnable$0(Lcom/android/apkzlib/utils/IOExceptionRunnable;)V> (0x00000000ea03d8d8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 58
+Event: 243.123 Thread 0x000000001d1e7800 Exception <a 'java/lang/IncompatibleClassChangeError': Found class java.lang.Object, but interface was expected> (0x00000000e37d44c0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 643]
+Event: 243.634 Thread 0x000000001d1e7800 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e0a61198) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
 
 Events (10 events):
 Event: 243.763 Thread 0x000000001addc800 flushing nmethod 0x0000000005b229d0

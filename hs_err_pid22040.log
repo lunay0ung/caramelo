@@ -180,7 +180,7 @@ Other Threads:
   0x0000000018dd5000 VMThread [stack: 0x000000001aaa0000,0x000000001aba0000] [id=17316]
   0x000000001ad76000 WatcherThread [stack: 0x000000001b930000,0x000000001ba30000] [id=28804]
 
-VM state:not at safepoint (normal execution)
+VM state:not questionedAt safepoint (normal execution)
 
 VM Mutex/Monitor currently owned by a thread: None
 
@@ -258,16 +258,16 @@ Classes redefined (0 events):
 No events
 
 Internal exceptions (10 events):
-Event: 2.480 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c54910) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.480 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c60090) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.563 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2f1b8c8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.574 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2f66cc8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.576 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2f744a8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.588 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2ff1b18) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.588 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2ff57d8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.589 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2ff72e0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 2.654 Thread 0x000000001c8ec800 Implicit null exception at 0x00000000052e2d96 to 0x00000000052e3131
-Event: 2.654 Thread 0x000000001c8ec800 Implicit null exception at 0x000000000521af96 to 0x000000000521b329
+Event: 2.480 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c54910) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.480 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c60090) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.563 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2f1b8c8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.574 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2f66cc8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.576 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2f744a8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.588 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2ff1b18) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.588 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2ff57d8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.589 Thread 0x000000001c8ec800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2ff72e0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 2.654 Thread 0x000000001c8ec800 Implicit null exception questionedAt 0x00000000052e2d96 to 0x00000000052e3131
+Event: 2.654 Thread 0x000000001c8ec800 Implicit null exception questionedAt 0x000000000521af96 to 0x000000000521b329
 
 Events (10 events):
 Event: 2.855 loading class groovy/lang/MetaProperty done

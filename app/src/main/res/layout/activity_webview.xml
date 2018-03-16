@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    tools:context="com.example.luna.caramelo.WebviewActivity">
+    tools:context="com.example.luna.caramelo.Main.WebviewActivity">
 
-    <include layout="@layout/webview_content"/>
+    <include
+        android:id="@+id/include"
+        layout="@layout/webview_content" />
 
 
     <include layout="@layout/anchorbottomsheet_dictionary" />

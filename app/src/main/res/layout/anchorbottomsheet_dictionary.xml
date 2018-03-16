@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightgrey"
     app:behavior_anchorOffset="350dp"
-    app:behavior_peekHeight="80dp"
+    app:behavior_peekHeight="70dp"
     app:behavior_defaultState="collapsed"
     android:fitsSystemWindows="true"
     app:layout_behavior="com.trafi.anchorbottomsheetbehavior.AnchorBottomSheetBehavior"
@@ -134,7 +134,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:id="@+id/layout_meaning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -156,7 +156,7 @@
                     android:id="@+id/et_meaningEn"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="0.6"
                     android:hint="스페인어-영어"

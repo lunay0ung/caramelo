@@ -85,7 +85,7 @@ Other Threads:
   0x00000000189b5800 VMThread [stack: 0x000000001a6b0000,0x000000001a7b0000] [id=31016]
   0x000000001a9d6800 WatcherThread [stack: 0x000000001b550000,0x000000001b650000] [id=21208]
 
-VM state:not at safepoint (normal execution)
+VM state:not questionedAt safepoint (normal execution)
 
 VM Mutex/Monitor currently owned by a thread: None
 
@@ -247,16 +247,16 @@ Classes redefined (0 events):
 No events
 
 Internal exceptions (10 events):
-Event: 6.672 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2bed4e0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 6.673 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c002e8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 6.673 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c01b98) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 7.592 Thread 0x000000001f8c1800 Implicit null exception at 0x0000000005533a5e to 0x0000000005533be1
-Event: 8.032 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000eb472ad8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 8.032 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000eb47bf10) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
-Event: 8.231 Thread 0x000000001f8c1800 Exception <a 'java/lang/IncompatibleClassChangeError': Found class java.lang.Object, but interface was expected> (0x00000000ec904c30) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 643]
-Event: 11.745 Thread 0x000000001f8bf800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$negate$1(Ljava/lang/Object;)Z> (0x00000000e108b5f0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 584]
-Event: 12.979 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparingInt$7b0bb60$1(Ljava/util/function/ToIntFunction;Ljava/lang/Object;Ljava/lang/Object;)I> (0x00000000e1304e48) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\inte
-Event: 30.156 Thread 0x000000001f8c1800 Implicit null exception at 0x00000000055070cc to 0x0000000005507dd9
+Event: 6.672 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2bed4e0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 6.673 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c002e8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 6.673 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000e2c01b98) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 7.592 Thread 0x000000001f8c1800 Implicit null exception questionedAt 0x0000000005533a5e to 0x0000000005533be1
+Event: 8.032 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000eb472ad8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 8.032 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000eb47bf10) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 8.231 Thread 0x000000001f8c1800 Exception <a 'java/lang/IncompatibleClassChangeError': Found class java.lang.Object, but interface was expected> (0x00000000ec904c30) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 643]
+Event: 11.745 Thread 0x000000001f8bf800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$negate$1(Ljava/lang/Object;)Z> (0x00000000e108b5f0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 584]
+Event: 12.979 Thread 0x000000001f8c1800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparingInt$7b0bb60$1(Ljava/util/function/ToIntFunction;Ljava/lang/Object;Ljava/lang/Object;)I> (0x00000000e1304e48) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\inte
+Event: 30.156 Thread 0x000000001f8c1800 Implicit null exception questionedAt 0x00000000055070cc to 0x0000000005507dd9
 
 Events (10 events):
 Event: 31.022 loading class com/sun/tools/javac/code/Scope$ScopeListener

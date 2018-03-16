@@ -1,2 +1,3 @@
 include ':app', ':naveridlogin_android_sdk_4.2.0', ':anchorBottomSheet library'
 include ':webViewMarker'
+include ':openCVLibrary341'

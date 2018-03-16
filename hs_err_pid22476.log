@@ -75,7 +75,7 @@ Other Threads:
   0x0000000018fb6800 VMThread [stack: 0x000000001acc0000,0x000000001adc0000] [id=25624]
   0x000000001af6d000 WatcherThread [stack: 0x000000001bac0000,0x000000001bbc0000] [id=24900]
 
-VM state:not at safepoint (normal execution)
+VM state:not questionedAt safepoint (normal execution)
 
 VM Mutex/Monitor currently owned by a thread: None
 
@@ -237,16 +237,16 @@ Classes redefined (0 events):
 No events
 
 Internal exceptions (10 events):
-Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e109d918) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e109e458) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e109ffd0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10a0b50) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.786 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10a8180) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.787 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10a8cb0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.787 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10aa828) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.787 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10ab390) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
-Event: 5.792 Thread 0x000000001ca70000 Exception <a 'java/lang/ClassNotFoundException': com/sun/org/glassfish/hk2/osgiresourcelocator/ServiceLoader> (0x00000000e1103cf8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
-Event: 5.798 Thread 0x000000001ca70000 Exception <a 'java/lang/NullPointerException'> (0x00000000e1140638) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1282]
+Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e109d918) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e109e458) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e109ffd0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.785 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10a0b50) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.786 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10a8180) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.787 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10a8cb0) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.787 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10aa828) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.787 Thread 0x000000001ca70000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e10ab390) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 5.792 Thread 0x000000001ca70000 Exception <a 'java/lang/ClassNotFoundException': com/sun/org/glassfish/hk2/osgiresourcelocator/ServiceLoader> (0x00000000e1103cf8) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 5.798 Thread 0x000000001ca70000 Exception <a 'java/lang/NullPointerException'> (0x00000000e1140638) thrown questionedAt [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1282]
 
 Events (10 events):
 Event: 6.010 loading class com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression$ClosureContext done
